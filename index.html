@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MATE MADE — Giáng Sinh 2026</title>
+  <meta name="description" content="MATE MADE — Mang mùa lễ hội về bên mình. Modern Fashion Editorial Campaign — Christmas 2026." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#08131F',
+            midnight2: '#0D1D2D',
+            cream: '#F7F3EA',
+            champagne: '#D8BC82',
+            champagne2: '#E9D6A9',
+            ink: '#101820'
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif']
+          },
+          letterSpacing: {
+            editorial: '.18em'
+          },
+          boxShadow: {
+            gold: '0 20px 70px rgba(216,188,130,.18)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Elegant editorial typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #08131F; }
+    ::selection { background: #D8BC82; color: #08131F; }
+
+    .grain {
+      position: relative;
+    }
+    .grain::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .055;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+      mix-blend-mode: screen;
+    }
+
+    .hero-image {
+      background-image:
+        linear-gradient(180deg, rgba(8,19,31,.05), rgba(8,19,31,.58)),
+        url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=85");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .story-image {
+      background-image:
+        linear-gradient(90deg, rgba(8,19,31,.08), rgba(8,19,31,.30)),
+        url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=85");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .date-image {
+      background-image:
+        linear-gradient(180deg, rgba(8,19,31,.16), rgba(8,19,31,.72)),
+        url("https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1800&q=85");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cta-image {
+      background-image:
+        linear-gradient(90deg, rgba(8,19,31,.86), rgba(8,19,31,.18)),
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .product-card img {
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+    .product-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .nav-link::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      background: #D8BC82;
+      transition: width .3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .gold-line {
+      background: linear-gradient(90deg, transparent, #D8BC82, transparent);
+    }
+
+    .reveal {
+      animation: reveal .9s ease both;
+    }
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .float-snow {
+      animation: float 7s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: block; }
+  </style>
+</head>
+
+<body class="font-sans text-cream antialiased">
+
+  <!-- HEADER -->
+  <header id="top" class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-midnight/75 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <a href="#top" class="group flex items-center gap-3" aria-label="MATE MADE về đầu trang">
+        <div class="flex h-9 w-9 items-center justify-center border border-champagne/70 text-champagne">
+          <span class="font-serif text-xl">M</span>
+        </div>
+        <div>
+          <div class="text-sm font-semibold tracking-[.28em]">MATE MADE</div>
+          <div class="text-[8px] tracking-[.32em] text-white/45">BAGS FOR YOUR OWN STORY</div>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#story" class="nav-link text-xs uppercase tracking-editorial text-white/70 hover:text-white">Câu chuyện</a>
+        <a href="#looks" class="nav-link text-xs uppercase tracking-editorial text-white/70 hover:text-white">BST</a>
+        <a href="#values" class="nav-link text-xs uppercase tracking-editorial text-white/70 hover:text-white">Tinh thần</a>
+        <a href="#christmas" class="nav-link text-xs uppercase tracking-editorial text-white/70 hover:text-white">Giáng Sinh 2026</a>
+      </nav>
+
+      <a href="#looks" class="hidden border border-champagne/60 px-5 py-2.5 text-[10px] font-semibold tracking-[.2em] text-champagne transition hover:bg-champagne hover:text-midnight md:inline-flex">
+        KHÁM PHÁ BST
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-champagne" aria-label="Mở menu">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu border-t border-white/10 bg-midnight/95 px-5 py-5 md:hidden">
+      <div class="flex flex-col gap-5">
+        <a href="#story" class="text-xs uppercase tracking-editorial text-white/75">Câu chuyện</a>
+        <a href="#looks" class="text-xs uppercase tracking-editorial text-white/75">BST</a>
+        <a href="#values" class="text-xs uppercase tracking-editorial text-white/75">Tinh thần</a>
+        <a href="#christmas" class="text-xs uppercase tracking-editorial text-white/75">Giáng Sinh 2026</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="grain relative min-h-screen overflow-hidden">
+      <div class="absolute inset-0 hero-image"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-midnight/95 via-midnight/60 to-midnight/10"></div>
+      <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-midnight to-transparent"></div>
+
+      <div class="relative mx-auto flex min-h-screen max-w-7xl items-end px-5 pb-20 pt-32 lg:px-8 lg:pb-24">
+        <div class="max-w-3xl reveal">
+          <div class="mb-7 flex items-center gap-4 text-champagne">
+            <span class="text-xl">✦</span>
+            <span class="text-[10px] font-semibold tracking-[.35em] uppercase">Christmas 2026 / MATE MADE</span>
+          </div>
+
+          <h1 class="font-serif text-6xl font-medium leading-[.88] tracking-tight sm:text-7xl lg:text-[110px]">
+            MANG MÙA<br />
+            <span class="text-champagne">LỄ HỘI</span><br />
+            VỀ BÊN MÌNH
+          </h1>
+
+          <p class="mt-8 max-w-xl text-sm font-light leading-7 text-white/75 sm:text-base">
+            Một mùa lễ hội để gặp gỡ, sẻ chia và lưu giữ những khoảnh khắc ấm áp nhất.
+            Cùng MATE MADE chọn chiếc túi đồng hành cùng bạn trong những cuộc hẹn đêm đông.
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a href="#looks" class="inline-flex items-center gap-4 bg-champagne px-7 py-4 text-[10px] font-bold tracking-[.25em] text-midnight transition hover:bg-champagne2">
+              KHÁM PHÁ BST
+              <span>→</span>
+            </a>
+            <a href="#story" class="inline-flex items-center gap-3 border border-white/30 px-7 py-4 text-[10px] font-medium tracking-[.25em] text-white transition hover:border-champagne hover:text-champagne">
+              CÂU CHUYỆN
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 right-7 hidden text-right lg:block">
+        <div class="float-snow text-3xl text-champagne/80">❄</div>
+        <div class="mt-2 text-[8px] tracking-[.35em] text-white/40">THE WINTER EDIT</div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" class="grain bg-midnight py-24 sm:py-32">
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-8">
+        <div class="story-image min-h-[540px] border border-white/10"></div>
+
+        <div>
+          <div class="mb-6 flex items-center gap-4">
+            <span class="h-px w-12 bg-champagne"></span>
+            <span class="text-[9px] font-semibold tracking-[.32em] text-champagne">02 / THE STORY</span>
+          </div>
+
+          <h2 class="font-serif text-5xl leading-[.95] sm:text-6xl lg:text-7xl">
+            MỖI CUỘC HẸN,<br />
+            <span class="text-champagne">MỘT KHOẢNH KHẮC</span>
+          </h2>
+
+          <div class="mt-8 space-y-5 text-sm font-light leading-7 text-white/65 sm:text-base">
+            <p>
+              Giáng Sinh không chỉ là ánh đèn lung linh hay những cây thông rực rỡ.
+              Đó còn là dịp để chúng ta trở về bên những người mình yêu thương,
+              gặp gỡ bạn bè và tạo nên những kỷ niệm mới trong những ngày cuối năm.
+            </p>
+            <p>
+              MATE MADE đồng hành cùng bạn trong những khoảnh khắc ấy –
+              như một người bạn nhỏ luôn bên cạnh mỗi hành trình.
+            </p>
+          </div>
+
+          <div class="mt-10 flex items-center gap-5">
+            <div class="h-px w-20 bg-champagne/50"></div>
+            <span class="font-serif italic text-lg text-champagne/90">for your own story.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKS -->
+    <section id="looks" class="grain bg-cream py-24 text-ink sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="max-w-2xl">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="h-px w-12 bg-midnight"></span>
+            <span class="text-[9px] font-bold tracking-[.32em] text-midnight/55">03 / THE WINTER EDIT</span>
+          </div>
+          <h2 class="font-serif text-5xl leading-none sm:text-6xl lg:text-7xl">
+            CHỌN TÚI<br />
+            <span class="italic text-midnight/55">CHO ĐÊM ĐÔNG</span>
+          </h2>
+          <p class="mt-6 max-w-xl text-sm leading-7 text-ink/60">
+            Ba mood cho ba hành trình — từ buổi hẹn tối Giáng Sinh đến những ngày dạo phố
+            và những chuyến đi kéo dài từ sáng đến đêm.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-7 md:grid-cols-3">
+
+          <!-- LOOK 01 -->
+          <article class="product-card group">
+            <div class="relative aspect-[4/5] overflow-hidden bg-midnight">
+              <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=85"
+                alt="Túi xách phong cách thanh lịch"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute left-5 top-5 bg-cream/90 px-3 py-2 text-[8px] font-bold tracking-[.2em] text-ink">
+                LOOK 01
+              </div>
+              <div class="absolute inset-x-0 bottom-0 translate-y-full bg-midnight/90 p-5 transition duration-500 group-hover:translate-y-0">
+                <p class="text-[9px] tracking-[.22em] text-champagne">THE DATE NIGHT</p>
+                <p class="mt-2 text-xs leading-5 text-white/70">Một điểm nhấn nhỏ cho buổi tối đặc biệt.</p>
+              </div>
+            </div>
+            <div class="pt-6">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="text-[9px] font-bold tracking-[.28em] text-ink/45">HẸN HÒ ĐÊM ĐÔNG</p>
+                  <h3 class="mt-2 font-serif text-3xl">Túi xách</h3>
+                </div>
+                <span class="font-serif text-2xl text-ink/30">01</span>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-ink/60">
+                Thanh lịch, nữ tính – điểm nhấn hoàn hảo cho những buổi hẹn hò tối Giáng Sinh.
+              </p>
+            </div>
+          </article>
+
+          <!-- LOOK 02 -->
+          <article class="product-card group md:mt-14">
+            <div class="relative aspect-[4/5] overflow-hidden bg-midnight">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=85"
+                alt="Túi đeo vai hoặc đeo chéo"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute left-5 top-5 bg-cream/90 px-3 py-2 text-[8px] font-bold tracking-[.2em] text-ink">
+                LOOK 02
+              </div>
+              <div class="absolute inset-x-0 bottom-0 translate-y-full bg-midnight/90 p-5 transition duration-500 group-hover:translate-y-0">
+                <p class="text-[9px] tracking-[.22em] text-champagne">THE CITY WALK</p>
+                <p class="mt-2 text-xs leading-5 text-white/70">Gọn nhẹ để đôi tay tự do tận hưởng phố đêm.</p>
+              </div>
+            </div>
+            <div class="pt-6">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="text-[9px] font-bold tracking-[.28em] text-ink/45">DẠO PHỐ LỄ HỘI</p>
+                  <h3 class="mt-2 font-serif text-3xl">Túi đeo vai / đeo chéo</h3>
+                </div>
+                <span class="font-serif text-2xl text-ink/30">02</span>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-ink/60">
+                Gọn nhẹ, tiện dụng – giải phóng đôi tay để bạn thoải mái dạo bước dưới phố lên đèn.
+              </p>
+            </div>
+          </article>
+
+          <!-- LOOK 03 -->
+          <article class="product-card group">
+            <div class="relative aspect-[4/5] overflow-hidden bg-midnight">
+              <img
+                src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1000&q=85"
+                alt="Túi tote rộng rãi"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute left-5 top-5 bg-cream/90 px-3 py-2 text-[8px] font-bold tracking-[.2em] text-ink">
+                LOOK 03
+              </div>
+              <div class="absolute inset-x-0 bottom-0 translate-y-full bg-midnight/90 p-5 transition duration-500 group-hover:translate-y-0">
+                <p class="text-[9px] tracking-[.22em] text-champagne">THE ALL-DAY MATE</p>
+                <p class="mt-2 text-xs leading-5 text-white/70">Không gian rộng rãi cho một ngày thật dài.</p>
+              </div>
+            </div>
+            <div class="pt-6">
+              <div class="flex items-start justify-between gap-5">
+                <div>
+                  <p class="text-[9px] font-bold tracking-[.28em] text-ink/45">MANG THEO CẢ NGÀY</p>
+                  <h3 class="mt-2 font-serif text-3xl">Túi tote</h3>
+                </div>
+                <span class="font-serif text-2xl text-ink/30">03</span>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-ink/60">
+                Không gian rộng rãi cho một ngày dài di chuyển, dạo chơi và mang theo những món quà bất ngờ.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="mt-14 text-center">
+          <a href="#cta" class="inline-flex items-center gap-5 border border-ink/30 px-7 py-4 text-[10px] font-bold tracking-[.25em] transition hover:bg-midnight hover:text-cream">
+            XEM TẤT CẢ PHONG CÁCH <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES / BENEFITS -->
+    <section id="values" class="grain bg-midnight py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="text-center">
+          <div class="mb-6 flex items-center justify-center gap-4">
+            <span class="h-px w-12 bg-champagne"></span>
+            <span class="text-[9px] font-semibold tracking-[.32em] text-champagne">04 / MATE MADE MINDSET</span>
+            <span class="h-px w-12 bg-champagne"></span>
+          </div>
+          <h2 class="font-serif text-5xl sm:text-6xl lg:text-7xl">YOUR STYLE. YOUR STORY. <span class="text-champagne">YOUR MATE.</span></h2>
+          <p class="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/55">
+            Không có một cách đúng để tận hưởng mùa lễ hội. Chỉ có cách khiến bạn cảm thấy là chính mình.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-3">
+          <div class="bg-midnight p-9 lg:p-12">
+            <div class="text-2xl text-champagne">✦</div>
+            <p class="mt-10 text-[9px] font-bold tracking-[.3em] text-white/40">01 / TỰ TIN</p>
+            <h3 class="mt-3 font-serif text-4xl">Own your style.</h3>
+            <p class="mt-5 text-sm leading-7 text-white/55">
+              Thể hiện cá tính theo cách riêng giữa mùa lễ hội. Không cần cố gắng để nổi bật — chỉ cần đúng là bạn.
+            </p>
+          </div>
+
+          <div class="bg-midnight p-9 lg:p-12">
+            <div class="text-2xl text-champagne">✦</div>
+            <p class="mt-10 text-[9px] font-bold tracking-[.3em] text-white/40">02 / TỰ DO</p>
+            <h3 class="mt-3 font-serif text-4xl">Move your way.</h3>
+            <p class="mt-5 text-sm leading-7 text-white/55">
+              Tự do lựa chọn phong cách và hành trình của mình — từ một cuộc hẹn ngẫu hứng đến cả ngày rong ruổi.
+            </p>
+          </div>
+
+          <div class="bg-midnight p-9 lg:p-12">
+            <div class="text-2xl text-champagne">✦</div>
+            <p class="mt-10 text-[9px] font-bold tracking-[.3em] text-white/40">03 / TỰ NHIÊN</p>
+            <h3 class="mt-3 font-serif text-4xl">Just be you.</h3>
+            <p class="mt-5 text-sm leading-7 text-white/55">
+              Thoải mái là chính mình trong từng khoảnh khắc. Chiếc túi chỉ là người bạn nhỏ, câu chuyện là của bạn.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHRISTMAS 2026 -->
+    <section id="christmas" class="grain relative min-h-[680px] overflow-hidden">
+      <div class="absolute inset-0 date-image"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-midnight/80 via-midnight/25 to-midnight/60"></div>
+
+      <div class="relative mx-auto flex min-h-[680px] max-w-7xl items-center px-5 py-24 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="mb-7 flex items-center gap-4 text-champagne">
+            <span class="text-2xl">❄</span>
+            <span class="text-[9px] font-semibold tracking-[.35em]">24.12.2026 / CHRISTMAS EVE</span>
+          </div>
+
+          <h2 class="font-serif text-6xl leading-[.88] sm:text-7xl lg:text-[100px]">
+            HẸN NHAU<br />
+            <span class="text-champagne">ĐÊM AN LÀNH</span>
+          </h2>
+
+          <p class="mt-8 max-w-xl text-sm font-light leading-7 text-white/75 sm:text-base">
+            Dưới ánh đèn rực rỡ của những con phố đêm đông, mỗi bước chân đều mang theo một câu chuyện.
+            Một đêm đông – một cuộc hẹn – một chiếc túi MATE MADE đồng hành.
+          </p>
+
+          <div class="mt-10 flex items-center gap-5">
+            <div class="h-px w-16 bg-champagne"></div>
+            <span class="font-serif text-xl italic text-white/80">A winter night to remember.</span>
+          </div>
+
+          <p class="mt-8 max-w-lg text-[10px] leading-5 text-white/40">
+            *Concept không khí Giáng Sinh giả định phục vụ bài tập, không phải thông báo về một sự kiện offline chính thức.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / CAMPAIGN STATS -->
+    <section class="bg-cream py-20 text-ink">
+      <div class="mx-auto max-w-5xl px-5 lg:px-8">
+        <div class="grid gap-10 text-center sm:grid-cols-3">
+          <div>
+            <div class="font-serif text-5xl">01</div>
+            <p class="mt-2 text-[9px] font-bold tracking-[.3em] text-ink/45">WINTER EDIT</p>
+            <p class="mt-3 text-sm text-ink/60">Một concept cho mùa lễ hội</p>
+          </div>
+          <div class="border-y border-ink/10 py-8 sm:border-x sm:border-y-0 sm:py-0">
+            <div class="font-serif text-5xl">03</div>
+            <p class="mt-2 text-[9px] font-bold tracking-[.3em] text-ink/45">MOODS</p>
+            <p class="mt-3 text-sm text-ink/60">Ba phong cách cho ba cuộc hẹn</p>
+          </div>
+          <div>
+            <div class="font-serif text-5xl">∞</div>
+            <p class="mt-2 text-[9px] font-bold tracking-[.3em] text-ink/45">YOUR STORY</p>
+            <p class="mt-3 text-sm text-ink/60">Câu chuyện là của riêng bạn</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="grain relative min-h-[620px] overflow-hidden">
+      <div class="absolute inset-0 cta-image"></div>
+      <div class="absolute inset-0 bg-midnight/15"></div>
+
+      <div class="relative mx-auto flex min-h-[620px] max-w-7xl items-center px-5 py-24 lg:px-8">
+        <div class="max-w-2xl">
+          <div class="mb-7 text-champagne">
+            <span class="text-2xl">✦</span>
+          </div>
+          <h2 class="font-serif text-6xl leading-[.88] sm:text-7xl lg:text-[100px]">
+            ĐÔNG CÓ HẸN.<br />
+            <span class="text-champagne">BẠN CÓ MATE.</span>
+          </h2>
+          <p class="mt-8 max-w-xl text-sm leading-7 text-white/75 sm:text-base">
+            Khám phá những chiếc túi dành cho hành trình mùa lễ hội của bạn.
+          </p>
+          <a href="#looks" class="mt-9 inline-flex items-center gap-5 bg-champagne px-8 py-4 text-[10px] font-bold tracking-[.25em] text-midnight transition hover:bg-champagne2">
+            KHÁM PHÁ MATE MADE <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="bg-midnight2 py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-2 lg:items-center lg:px-8">
+        <div>
+          <p class="text-[9px] font-bold tracking-[.32em] text-champagne">STAY IN THE STORY</p>
+          <h2 class="mt-4 font-serif text-4xl sm:text-5xl">Đừng bỏ lỡ những câu chuyện mới.</h2>
+          <p class="mt-4 max-w-xl text-sm leading-6 text-white/50">
+            Đăng ký nhận thông tin về những bộ sưu tập, editorial và khoảnh khắc mới từ MATE MADE.
+          </p>
+        </div>
+
+        <form id="newsletterForm" class="flex flex-col gap-3 sm:flex-row" onsubmit="subscribe(event)">
+          <label class="sr-only" for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            required
+            placeholder="Email của bạn"
+            class="min-h-[52px] flex-1 border border-white/15 bg-white/5 px-5 text-sm text-white outline-none placeholder:text-white/30 focus:border-champagne"
+          />
+          <button type="submit" class="min-h-[52px] bg-champagne px-7 text-[10px] font-bold tracking-[.22em] text-midnight transition hover:bg-champagne2">
+            ĐĂNG KÝ
+          </button>
+        </form>
+      </div>
+      <div id="formMessage" class="mx-auto mt-5 hidden max-w-7xl px-5 text-xs text-champagne lg:px-8"></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-midnight px-5 py-12 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="flex h-9 w-9 items-center justify-center border border-champagne/70 text-champagne">
+              <span class="font-serif text-xl">M</span>
+            </div>
+            <div class="text-sm font-semibold tracking-[.28em]">MATE MADE</div>
+          </div>
+          <p class="mt-5 max-w-xs font-serif text-2xl text-white/70">Bags for your own story.</p>
+          <p class="mt-4 max-w-sm text-xs leading-6 text-white/35">
+            Christmas 2026 — một concept editorial về những cuộc hẹn, hành trình và khoảnh khắc cuối năm.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-[9px] font-bold tracking-[.28em] text-champagne">EXPLORE</p>
+          <div class="mt-5 flex flex-col gap-3 text-xs text-white/50">
+            <a href="#looks" class="hover:text-white">Túi xách</a>
+            <a href="#looks" class="hover:text-white">Bộ sưu tập</a>
+            <a href="#story" class="hover:text-white">Về MATE MADE</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-[9px] font-bold tracking-[.28em] text-champagne">CONTACT</p>
+          <div class="mt-5 flex flex-col gap-3 text-xs text-white/50">
+            <a href="mailto:hello@matemade.com" class="hover:text-white">hello@matemade.com</a>
+            <a href="#" class="hover:text-white">Instagram</a>
+            <a href="#" class="hover:text-white">Facebook</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-[9px] font-bold tracking-[.28em] text-champagne">NAVIGATE</p>
+          <div class="mt-5 flex flex-col gap-3 text-xs text-white/50">
+            <a href="#top" class="hover:text-white">Về đầu trang ↑</a>
+            <a href="#christmas" class="hover:text-white">Christmas 2026</a>
+            <a href="#cta" class="hover:text-white">Khám phá MATE MADE</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-white/10 pt-6 text-[9px] tracking-[.16em] text-white/25 sm:flex sm:items-center sm:justify-between">
+        <span>© 2026 MATE MADE. ALL RIGHTS RESERVED.</span>
+        <span class="mt-2 block sm:mt-0">DESIGNED AS A CHRISTMAS CAMPAIGN CONCEPT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Demo newsletter interaction
+    function subscribe(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('formMessage');
+      message.textContent = `Cảm ơn bạn — ${email} đã được ghi nhận cho concept newsletter.`;
+      message.classList.remove('hidden');
+      event.target.reset();
+    }
+
+    // Subtle reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('section > div, article').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
